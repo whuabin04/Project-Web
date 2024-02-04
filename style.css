@@ -350,7 +350,7 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1200px){
     #header{
         background: linear-gradient(rgba(0,0,0,0.6), #ffc6b4), url(images/pexels-pok-rie-1432674.jpg);
         background-size: cover;
