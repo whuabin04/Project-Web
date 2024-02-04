@@ -357,8 +357,6 @@ nav .fas{
         background: linear-gradient(rgba(0,0,0,0.6), #ffc6b4), url(images/pexels-pok-rie-1432674.jpg);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
-        position: relative;
     }
 
     .header-text{
