@@ -359,7 +359,6 @@ nav .fas{
         background-position: center;
         background-attachment: fixed;
         position: relative;
-        z-index: 1;
     }
 
     .header-text{
