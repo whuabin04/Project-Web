@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        /*ffc6b4 for peach*/
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #080808; /* Change background color to black */
+            color: #fff; /* Change text color to white */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #header {
+            background-color: #ffc6b4;
+            padding: 15px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        #header p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        #about {
+            padding: 30px 0;
+        }
+
+        #about h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        #about p {
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #c0c0c0;
+        }
+
+        .media-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .media-container iframe,
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .large-video-container {
+            width: 100%; /* Adjust width as needed */
+            max-width: 800px; /* Set maximum width */
+            margin: 0 auto; /* Center align */
+        }
+
+        .large-video-container iframe {
+            width: 100%;
+            height: 450px; /* Adjust height as needed */
+        }
+
+        #gallery {
+            padding: 30px 0;
+        }
+
+        #gallery h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-top: 0; /* Remove top margin to match other headers */
+        }
+
+        .work-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+            grid-gap: 20px;
+            margin-top: 30px; /* Adjust the gap size */
+            margin-bottom: 20px; /* Adjust the gap size */
+        }
+
+        .work-images img {
+            width: 100%; /* Ensure images occupy full width of their container */
+            height: 450px; /* Set a fixed height for all images */
+            object-fit: cover; /* Maintain aspect ratio and cover entire container */
+        }
+
+        .btn{
+            display: block;
+            width: fit-content;
+            border: 1px solid #fff;
+            padding: 14px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.5s;
+            position: relative; /* Position relative to its container */
+        }
+
+        .btn:hover{
+            background: #ffc6b4;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/cc94d4c205.js" crossorigin="anonymous"></script>
+    <script>
+        // JavaScript function to toggle visibility of the code section
+        function toggleCodeSection() {
+            var codeSection = document.getElementById("code-section");
+            if (codeSection.style.display === "none") {
+                codeSection.style.display = "block";
+            } else {
+                codeSection.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <h1><span>Multi-Function Variable Digital Clock</span></h1>
+            <p>Designed a digital clock with ATMEGA4809, programmed with C++, on a PCB with settings that 
+                allow for 12/24-hour basis display in real-time as well as the ability to serve as a 
+                timer/counter using four 7-segment displays, and simultaneously act as a battery charger 
+                for other devices.</p>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="media-container large-video-container">
+                <!-- Embedded Video -->
+                <iframe src="IMG_5293.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h2>Background</h2>
+            <p>
+                ESE 123 - Introduction to Computer and Electrical Engineering is one of the first courses 
+                taken by undergraduates planning to study the Computer Engineering or Electrical Engineering 
+                major at Stony Brook University. The common project that the students work on throughout the
+                semester is the multi-function variable digital clock. The project is designed and prototyped 
+                by professor David Westerfeld and the students are required to finish the design and implementation 
+                of its functionality through the weekly labs. The project is designated to be a multi-function 
+                digital clock that can be used as a timer, counter, and battery charger.
+            </p>
+
+            <h2>What It Does</h2>
+            <p>
+                The final design of the digital clock is programmed to have three simulataneous functionalities.
+                There are three pushbutton switches labelled UP, OK, and DOWN used to navigate through the different
+                settings and options. The first functionality is to display the time in real-time, with the option 
+                to swap between 12-hour and 24-hour basis using four seven-segment display modules and the pushbuttons. 
+                The second functionality is to act as a charger with a USB A port to other devices and keep track 
+                of the delivered power to that device. The third functionality is to act as a timer or counter with
+                options to pause, reset, and restart the timer. The timer can be set to a maximum of 99 minutes and
+                59 seconds before rolling over to 0. Of course with the ATMEGA4809, the digital clock can be programmed
+                to have other functionalities and features.
+            </p>
+
+            <h2>Features</h2>
+            <p>
+                ATMEGA4809 Microcontroller
+                <br>C++ Programming Language
+                <br>Assembly Language
+                <br>LTspice for Circuit Simulation
+                <br>Soldering and PCB
+                <br>Oscilloscope
+                <br>Function Generator
+                <br>Power Supplies
+                <br>Operational Amplifier
+                <br>Morse Code
+                <br>[Sources will be hidden for privacy purposes]
+            </p>
+
+            <!--img src="images/Screenshot 2024-01-31 201615.png" alt="schematic"-->
+        
+            <!-- Button to toggle code section>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <button onclick="toggleCodeSection()">View Code</button>
+            </div-->
+
+            <a class="btn" onclick="toggleProjects()">View Sources</a>
+
+            <h2>Gallery</h2>
+            <div class="work-images">
+                <img src="images/NZZRE3455.JPG" alt="gallery1">
+                <img src="images/IMG_E6769.JPG" alt="homer">
+            </div>
+        </div>
+    </div>
+
+    <!--div id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="work-images">
+                <img src="images/NZZRE3455.JPG" alt="gallery1">
+                <img src="images/IMG_E6769.JPG" alt="homer">
+            </div>
+        </div>
+    </div-->
+</body>
+</html>
